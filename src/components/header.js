@@ -41,6 +41,10 @@ const Header = ({ siteTitle }) => {
           alignItems: "center",
         }}
       >
+        <Link url="/cart" isButton>
+          Cart
+          {countMarkup}
+        </Link>
         <Styled.h1 sx={{ margin: 0, fontSize: 20, fontWeight: "bold" }}>
           <Link
             url="/"
@@ -66,7 +70,7 @@ const Header = ({ siteTitle }) => {
           Cart
           {countMarkup}
         </Link>
-      </div>
+        </div>
     </Styled.div>
   )
 }

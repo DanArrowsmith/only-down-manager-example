@@ -10,12 +10,23 @@ import { prepareVariantsWithOptions, prepareVariantsImages } from "./utilities"
 import { useAddItemToCart } from "gatsby-theme-shopify-manager"
 
 const ProductPage = ({ data: { shopifyProduct: product } }) => {
-  const colors = product.options.find(
+  const colors =  product.options.find(
     option => option.name.toLowerCase() === "color"
-  ).values
+    ) ? product.options.find(
+         option => option.name.toLowerCase() === "color"
+       ).values : ["N/A"]
+
   const sizes = product.options.find(
     option => option.name.toLowerCase() === "size"
-  ).values
+    ) ? product.options.find(
+         option => option.name.toLowerCase() === "size"
+       ).values : ["N/A"]
+  // const colors = product.options.find(
+  //   option => option.name.toLowerCase() === "color"
+  // ).values
+  // const sizes = product.options.find(
+  //   option => option.name.toLowerCase() === "size"
+  // ).values
 
   const variants = useMemo(() => prepareVariantsWithOptions(product.variants), [
     product.variants,
