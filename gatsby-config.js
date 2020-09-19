@@ -50,13 +50,9 @@ module.exports = {
         // This path is relative to the root of the site.
         icon: `src/images/icon.png`,
         icons: [
+
           {
-            src: `/images/icon.png`,
-            sizes: `192x192`,
-            type: `image/png`,
-          },
-          {
-            src: `/images/icon.png`,
+            src: `/icons/icon-512x512.png`,
             sizes: `512x512`,
             type: `image/png`,
             purpose: `maskable`,
