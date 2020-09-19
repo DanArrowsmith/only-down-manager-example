@@ -46,21 +46,22 @@ module.exports = {
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        display: `minimal-ui`, 
+        // This path is relative to the root of the site.
+        icon: `src/images/icon.png`,
         icons: [
           {
-            src: `src/images/icon.png`,
+            src: `/images/icon.png`,
             sizes: `192x192`,
             type: `image/png`,
           },
           {
-            src: `src/images/icon.png`,
+            src: `/images/icon.png`,
             sizes: `512x512`,
             type: `image/png`,
-            purpose: `any maskable`,
+            purpose: `maskable`,
           },
-        ],
+        ],  
       },
     },
     {
